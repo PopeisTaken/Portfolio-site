@@ -79,7 +79,7 @@ if (!document.querySelector(`link[href="${fontLink.href}"]`))
 const globalStyle = `
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  body { background: #ebd7a5; color: #0f0f0f; font-family: 'Instrument Sans', sans-serif; overflow-x: hidden; }
+  body { background: #f8f6f1; color: #0f0f0f; font-family: 'Instrument Sans', sans-serif; overflow-x: hidden; }
   body::before {
     content: '';
     position: fixed; inset: 0;
@@ -216,7 +216,7 @@ function Hero() {
         {ME.role} · {ME.availability}
       </p>
 
-      <h1 style={{ ...anim(0.35), fontFamily: C.serif, fontSize: "clamp(3.5rem,9vw,8rem)", lineHeight: 0.95, color: C.ink,letterSpacing: "-0.03em", marginBottom: "1.5rem" }}>
+      <h1 style={{ ...anim(0.35), fontFamily: C.serif, fontSize: "clamp(3.5rem,9vw,8rem)", lineHeight: 0.95, color: C.ink2,letterSpacing: "-0.03em", marginBottom: "1.5rem" }}>
         {first}<br />
         <em style={{ fontStyle: "italic", color: C.ink2 }}>{rest.join(" ")}</em>
       </h1>
