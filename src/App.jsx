@@ -20,7 +20,7 @@ const ME = {
   email: "ojosamuel2505@gmail.com",
   linkedin: "https://linkedin.com/in/samuel-ojo-926112311",
   github: "https://github.com/PopeisTaken",
-  
+  twitter: "https://twitter.com/SamuelOjo_",
 };
 
 /* ── Add / remove skills in each group ── */
@@ -43,25 +43,39 @@ const SKILLS = [
    category options: "Cloud Security" | "Forensics" | "Automation" | "Research" | "Other"
    link is optional — set to "" to hide it                         */
 const PROJECTS = [
-  // {
-  //   title: "My Project",
-  //   category: "Cloud Security",
-  //   desc: "What you built and why it matters.",
-  //   stack: ["Python", "AWS"],
-  //   link: "https://github.com/samuelojo/my-project",
-  // },
+  {
+    title: "AWS CloudTrail Anomaly Detector",
+    category: "Cloud Security",
+    desc: "A serverless tool that identifies suspicious API activity in CloudTrail logs using AWS Lambda and Athena.",
+    stack: ["Python", "AWS Athena", "Lambda", "Terraform"],
+    link: "https://github.com/PopeisTaken/cloudtrail-detector",
+  },
+  {
+    title: "Forensic Timeline Builder",
+    category: "Forensics",
+    desc: "A script to parse multiple log sources (SSH, Auth, Syslog) and create a unified CSV timeline for incident analysis.",
+    stack: ["Go", "Linux"],
+    link: "https://github.com/PopeisTaken/timeline-builder",
+  },
 ];
 
 /* ── Add a new blog post by copying one of these objects ──
    link is optional — set to "" to hide it                   */
 const BLOG_POSTS = [
-  // {
-  //   date: "Mar 2025",
-  //   tag: "Cloud Security",
-  //   title: "Hunting for Credential Theft in AWS CloudTrail Logs",
-  //   excerpt: "A walkthrough of the indicators and queries I use to spot stolen keys in the wild.",
-  //   link: "https://yourblog.com/cloudtrail-hunting",
-  // },
+  {
+    date: "Mar 2025",
+    tag: "Cloud Security",
+    title: "Hunting for Credential Theft in AWS CloudTrail Logs",
+    excerpt: "A walkthrough of the indicators and queries I use to spot stolen keys in the wild.",
+    link: "https://yourblog.com/cloudtrail-hunting",
+  },
+  {
+    date: "Feb 2025",
+    tag: "Forensics",
+    title: "Memory Forensics 101: Understanding Volatility 3",
+    excerpt: "Diving into common plugins for analyzing suspicious memory dumps in forensic investigations.",
+    link: "https://yourblog.com/memory-forensics",
+  },
 ];
 
 /* ============================================================
@@ -489,8 +503,8 @@ function Contact() {
     { label: "Email", display: ME.email + " ↗", href: `mailto:${ME.email}` },
     { label: "LinkedIn", display: ME.linkedin.replace("https://", "") + " ↗", href: ME.linkedin },
     { label: "GitHub", display: ME.github.replace("https://", "") + " ↗", href: ME.github },
-    { label: "Twitter / X", display: ME.twitter.replace("https://twitter.com/", "@") + " ↗", href: ME.twitter },
-  ].filter((l) => l.href);
+    ME.twitter && { label: "Twitter / X", display: ME.twitter.replace("https://twitter.com/", "@") + " ↗", href: ME.twitter },
+  ].filter(Boolean);
 
   const eyebrow = PROJECTS.length > 0 ? "05 — Contact" : BLOG_POSTS.length > 0 ? "04 — Contact" : "03 — Contact";
 
