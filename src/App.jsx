@@ -17,25 +17,25 @@ const ME = {
     "With hands-on experience across AWS, Azure, and GCP security postures, I help organisations understand their attack surface and build hardened infrastructure that scales.",
     "When I'm not hunting threats, I'm writing about them — documenting research, incident response playbooks, and automation patterns for the community.",
   ],
-  email: "samuel@example.com",
-  linkedin: "https://linkedin.com/in/samuelojo",
-  github: "https://github.com/samuelojo",
-  twitter: "https://twitter.com/samuelojo",
+  email: "ojosamuel2505@gmail.com",
+  linkedin: "https://linkedin.com/in/samuel-ojo-926112311",
+  github: "https://github.com/PopeisTaken",
+  
 };
 
 /* ── Add / remove skills in each group ── */
 const SKILLS = [
   {
     group: "Cloud & Infrastructure",
-    tags: ["AWS", "Azure", "GCP", "Terraform", "Kubernetes", "Docker"],
+    tags: ["AWS", "GCP", "Terraform", "Kubernetes", "Docker"],
   },
   {
     group: "Forensics & IR",
-    tags: ["Nmap", "Wireshark", "Splunk", "Elastic SIEM", "MITRE ATT&CK"],
+    tags: ["Nmap", "Wireshark", "Splunk", "MITRE ATT&CK"],
   },
   {
     group: "Automation & Dev",
-    tags: ["Python", "Bash", "GitHub Actions", "Ansible", "Sigma"],
+    tags: ["Python", "Bash", "GitHub Actions", "N8n"],
   },
 ];
 
@@ -79,7 +79,7 @@ if (!document.querySelector(`link[href="${fontLink.href}"]`))
 const globalStyle = `
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  body { background: #f8f6f1; color: #0f0f0f; font-family: 'Instrument Sans', sans-serif; overflow-x: hidden; }
+  body { background: #ebd7a5; color: #0f0f0f; font-family: 'Instrument Sans', sans-serif; overflow-x: hidden; }
   body::before {
     content: '';
     position: fixed; inset: 0;
@@ -216,7 +216,7 @@ function Hero() {
         {ME.role} · {ME.availability}
       </p>
 
-      <h1 style={{ ...anim(0.35), fontFamily: C.serif, fontSize: "clamp(3.5rem,9vw,8rem)", lineHeight: 0.95, letterSpacing: "-0.03em", marginBottom: "1.5rem" }}>
+      <h1 style={{ ...anim(0.35), fontFamily: C.serif, fontSize: "clamp(3.5rem,9vw,8rem)", lineHeight: 0.95, color: C.ink,letterSpacing: "-0.03em", marginBottom: "1.5rem" }}>
         {first}<br />
         <em style={{ fontStyle: "italic", color: C.ink2 }}>{rest.join(" ")}</em>
       </h1>
